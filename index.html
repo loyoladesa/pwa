@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+    <title>Todo PWA</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Minhas Tarefas</h1>
+            <div class="offline-indicator" id="offlineIndicator">
+                📡 Offline
+            </div>
+        </header>
+        
+        <main>
+            <div class="add-todo">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    placeholder="Adicionar nova tarefa..."
+                    autocomplete="off"
+                >
+                <button id="addBtn">➕ Adicionar</button>
+            </div>
+            
+            <ul id="todoList" class="todo-list"></ul>
+            
+            <div class="stats">
+                <span id="todoCount">0 tarefas</span>
+                <button id="clearCompleted">Limpar concluídas</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
